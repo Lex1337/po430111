@@ -21,8 +21,8 @@ from django.urls import path
 from lex import views
 
 
-urlpatterns = {
+urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('about/', views.about)
-}
+    path('', views.index, name='home'),
+    path('about/', views.about, name='about'),
+]
